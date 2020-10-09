@@ -75,9 +75,10 @@ function onResize() {
   for(let i = mbps.length; i--;) {
     if(window.innerWidth >= mbps[i].value) {
       if(mbps[i].key !== current) {
+        const prev = current
         current = mbps[i].key
-        emit('breakpoint', current)
-        emit(`breakpoint.${current}`, current)
+        emit('breakpoint', current, prev)
+        emit(`breakpoint.${current}`, current, prev)
       }
       break
     }
