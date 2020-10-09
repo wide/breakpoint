@@ -1,6 +1,6 @@
 {
   "name": "@wide/breakpoint",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Breakpoint observer and helpers",
   "license": "MIT",
   "author": "Aymeric Assier (https://github.com/myeti)",
