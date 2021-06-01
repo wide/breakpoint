@@ -9,8 +9,8 @@
     "Julien Martins Da Costa (https://github.com/jdacosta)"
   ],
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/wide/breakpoint.git"
+    "type": "git",
+    "url": "https://github.com/wide/breakpoint.git"
   },
   "main": "lib",
   "engines": {
