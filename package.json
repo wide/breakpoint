@@ -21,10 +21,11 @@
     "prepare": "rimraf lib/ && npm run build"
   },
   "dependencies": {
-    "@wide/emitter": "^2.0.1"
+    "@wide/emitter": "^2.1.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
     "@babel/preset-env": "^7.14.4",
     "rimraf": "^3.0.2"
   }
