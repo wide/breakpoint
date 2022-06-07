@@ -23,15 +23,6 @@ let mbps = []
 
 
 /**
- * Get window viewport width
- * @return {Number}
- */
- function getWindowWidth() {
-  return window.visualViewport?.width || window.outerWidth
-}
-
-
-/**
  * Get upper breakpoint value (lg -> xl.value)
  * @param {String} key
  * @return {Number}
@@ -81,7 +72,7 @@ export default function breakpoint(sizes) {
  */
 function onResize() {
   for(let i = mbps.length; i--;) {
-    if(getWindowWidth() >= mbps[i].value) {
+    if(window.innerWidth >= mbps[i].value) {
       if(mbps[i].key !== current) {
         const prev = current
         current = mbps[i].key
@@ -101,7 +92,7 @@ function onResize() {
  */
 export function up(key) {
   validateKey(key)
-  return getWindowWidth() >= breakpoints[key]
+  return window.innerWidth >= breakpoints[key]
 }
 
 
@@ -112,7 +103,7 @@ export function up(key) {
  */
 export function down(key) {
   validateKey(key)
-  return getWindowWidth() < breakpoints[key]
+  return window.innerWidth < breakpoints[key]
 }
 
 
@@ -128,7 +119,7 @@ export function between(from, to, included = true) {
   validateKey(to)
   const _from = included ? breakpoints[from] : nextOf(from)
   const _to = included ? nextOf(to) : breakpoints[to]
-  return (getWindowWidth() >= _from && getWindowWidth() < _to)
+  return (window.innerWidth >= _from && window.innerWidth < _to)
 }
 
 
